@@ -21,6 +21,7 @@ Add the log4j2.component.properties configuration file under the application cla
 ## Issue reproduce
 
 Create dummy ldap server for testing
+
 https://www.npmjs.com/package/ldap-server-mock
 
 And use wireshark to capture ldap traffice to verify (filter: tcp.dstport==1389)
