@@ -18,6 +18,8 @@ Apache Log4j Remote code execution
 （2）Change setting
 Add the log4j2.component.properties configuration file under the application classpath, log4j2.formatMsgNoLookups=true
 
+（3）Upgrade version to 2.15.0 or newer
+
 ## Issue reproduce
 
 Create dummy ldap server for testing
