@@ -2,17 +2,25 @@
 https://www.lunasec.io/docs/blog/log4j-zero-day/
 
 # Apache-Log4j
-Apache Log4j 远程代码执行
+Apache Log4j Remote code execution
 
-> 攻击者可直接构造恶意请求，触发远程代码执行漏洞。漏洞利用无需特殊配置，经阿里云安全团队验证，Apache Struts2、Apache Solr、Apache Druid、Apache Flink等均受影响
+> Attackers can directly construct malicious requests to trigger remote code execution vulnerabilities. Vulnerability exploitation does not require special configuration, verified by Alibaba Cloud security team
+> Equally affected: Apache Struts2、Apache Solr、Apache Druid、Apache Flink
 
 ![image](https://user-images.githubusercontent.com/45926593/145425339-47c71230-87d2-4519-8919-9c3520850f83.png)
 
 
-### 修复方案：
+### Repair plan：
 
-（1）修改jvm参数
+（1）Modify jvm parameters
 -Dlog4j2.formatMsgNoLookups=true
 
-（2）修改配置
-在应用classpath下添加log4j2.component.properties配置文件，log4j2.formatMsgNoLookups=true
+（2）Change setting
+Add the log4j2.component.properties configuration file under the application classpath, log4j2.formatMsgNoLookups=true
+
+## Issue reproduce
+
+Create dummy ldap server for testing
+https://www.npmjs.com/package/ldap-server-mock
+
+And use wireshark to capture ldap traffice to verify (filter: tcp.dstport==1389)
