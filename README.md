@@ -1,4 +1,4 @@
-# Log4j zero day RCE
+# Log4j zero day RCE (CVE-2021-44228)
 https://www.lunasec.io/docs/blog/log4j-zero-day/
 
 # Apache-Log4j
